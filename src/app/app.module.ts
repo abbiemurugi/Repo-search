@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RepoService } from './repo.service'
 import { AppComponent } from './app.component';
 import { RepoComponent } from './repo/repo.component'
 
@@ -12,7 +12,7 @@ import { RepoComponent } from './repo/repo.component'
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [RepoService],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
