@@ -10,13 +10,13 @@ export class RepoService {
   private username:string;
 
   constructor(private http:Http) {
-    this.username = 'nyagaG'
+    this.username = 'abbiemurugi';
    }
    getrepoInfo(){
      return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + environment.clientid + "&client_secret=" + environment.clientsecret)
      .pipe(map(res => res.json()));
    }
-   getrepos(){
+   getRepos(){
     return this.http.get("https://api.github.com/users/" + this.username + "repos?client_id=" + environment.clientid + "&client_secret=" + environment.clientsecret)
     .pipe(map(res => res.json()));
   }
