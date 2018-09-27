@@ -1,3 +1,45 @@
-<p>
-  repo works!
-</p>
+<div class="container">
+<form action="" class="users-form">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search username" [(ngModel)]="username" name="username" (keyup)="findRepo()">
+    </div>
+  </form>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+          <img src="{{repo.avatar_url}}">
+        
+    </div>
+
+    <div class="row">    
+      <div class="col-md-4">
+        <ul class="list-group">
+          <li class="list-group-item" *ngIf="repo.bio">{{repo.bio}}</li>
+          <li class="list-group-item" *ngIf="repo.email">{{repo.email}}</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        
+          <div  class="label label-default">{{repo.followers}} Followers</div>
+          <div class="label label-default">{{repo.following}} Following</div>
+          <div class="label label-default">{{repo.public_repos}} Public Repos</div>
+            <p><a href="{{repo.html_url}}" target="_blank" class="btn btn-success btn-sm">Show info</a></p>
+        
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+      </div>
+      <div class="panel-body" *ngFor="let repo of repos"></div>
+    </div>
+    <br>
+    <p>
+      {{repos.name}} <a href="{{repo.html_url}}" class="btn btn-sm btn-warning">Show repos</a>
+    </p>
+    <p>{{repo.description}}</p>
+  </div>
+  </div>
+  </div>
+</div>
