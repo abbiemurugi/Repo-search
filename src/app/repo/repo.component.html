@@ -38,7 +38,9 @@
     <div class="row">
       <div class="panel-body" *ngFor="let repos of repos" index=i>
         {{repos.name}}
-      </div>   
+      </div> 
+      <p>{{repos.description}}</p>
+      <p>This repo will be completed in {{repo.completeDate|dateCount}} days</p>
    
   </div>
   </div>
