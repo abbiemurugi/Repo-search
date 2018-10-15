@@ -5,11 +5,13 @@ import { RepoService } from './repo.service'
 import { AppComponent } from './app.component';
 import { RepoComponent } from './repo/repo.component';
 import { FormsModule } from '@angular/forms';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     RepoComponent,
+    DateCountPipe,
   ],
   imports: [
     BrowserModule,
